@@ -1,90 +1,872 @@
-body {
-font-family: Arial, Helvetica, sans-serif;
-line-height: 1.6;
-margin: 0;
-padding: 0;
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
- 
+
+ul {
+list-style: none;
 }
 
-
+/* Header and navigation */
 header {
-    background: #f5f5dc;
-    color: #333;
-   padding: 20px 0;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav_logo img {
+    max-width: 60px;
+    height: auto;
+}
+
+
+
+
+
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+*/
+
+.nav_links {
 display: flex;
-justify-content: space-between;
-align-items: center;
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
+justify-content: center;
+align-items: center;    
+gap: 40px;
+
 }
 
-.background-container {
+.nav_links a {
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+}
 
-    background-image: url('/_images/background/view-roasted-coffee-beans_23-2150698861\ \(1\).jpg');
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   width: 100%;
-   height: 400px;
+.nav_links a:hover {
+    border-bottom: 2px solid rgba(142, 87, 5, 0.773);
+}
+
+/*Home section */
+
+.home {
+    position: relative;
+    height: 100vh;
+background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
 }
 
 
-.logo img {
-   display: block;
+.home-text h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 300;
 }
- 
-a {
+
+.home-text h2 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #422c1c;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+.button:hover {
+    background-color: #c68642;
+}
+
+
+
+/*
+
+.home-content button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #422c1c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    align-items:center;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+
+.home-content button:hover {
+    background-color: rgba(224, 168, 84, 0.819);
+    color: white;
+}
+
+     */
+
+/* Styling the Top Category Images */
+
+
+
+.menu h1 {
+    font-size: 40px;
+    color: #422c1c;
+    padding-top: 30px;
+}
+
+
+.menu p {
+    padding: 20px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.menu h2 {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #422c1c;
+}
+
+.menu {
+    text-align: center;
+}
+
+.top-category-container {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.top-menu {
+    text-align: center;
+    max-width: 300px;
+}
+
+.top-menu img {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+
+
+
+.description {
+    font-size: 20px;
+    color: #0a0a0a;
+    margin-top: 0;
+}
+
+/* Image Styling */
+
+.booking-image {
+    max-width: 100%;
+    width: 100%;
+    height: 750px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.chocolate {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hourss ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.hourss li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.hourss li:last-child {
+    border-bottom: none;
+}
+
+.hourss li span {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+}
+
+.hourss li time {
+    display: inline-block;
+    text-align: right;
+}
+
+.hourss h2 {
+    padding-bottom: 30px;
+}
+
+
+
+/* Styling the Footer */
+
+
+footer {
+    background: rgba(63, 69, 81, 0.16);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+footer ul.social-icons li {
+    margin: 0 10px;
+}
+
+footer ul.social-icons li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+footer p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+}
+
+
+
+.footer-container {
+    background-color: #120801;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+}
+
+
+
+
+.footer-content > div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.footer-content ul li {
+    margin-bottom: 5px;
+}
+
+
+.hours, h2 {
+    padding-bottom: 10px;
+}
+
+#contacts, h2 {
+    padding-bottom: 10px;
+}
+/* stop here*/
+
+
+
+
+
+.hours {
+    font-size: 16px;
+}
+
+.hours h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hours ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.hours li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    max-width: 80%;
+    width: auto;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.hours li:last-child {
+    border-bottom: none;
+}
+
+
+
+.icons ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.icons a {
+    color: #fff;
     text-decoration: none;
 }
 
-a:hover {
-    color: 007bff;
+
+.icons a:hover {
+    color: #e0ce94;
 }
 
 
-.links {
-    display: flex;
+.bottom-links ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
-   margin-right: 20px;
-    float: left;
+    display: block;
+}
+
+
+.bottom-links ul li {
+    margin-bottom: 5px;
+}
+
+.bottom-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.bottom-links a:hover {
+    color: #e0ce94;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ddd;
+}
+/* Gallery Container Styling */
+
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 21px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+
+#gallery {
+    text-align: center;
+    font-size: 31px;
+}
+
+.gallery h2 {
+    grid-column: span 3;
+    text-align: center;
+margin-bottom: 21px;
+    color: #241304;
+    padding-top: 31px;
+    padding-bottom: 31px;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #000000;
+    font-style: italic;
+}
+
+/* Booking Form Section */
+
+
+.contact {
+    padding: 60px 20px 100px;
+}
+
+ .section_title {
+    text-align: center;
+    font-size: 28px;
+    color: 28px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    color: #241304;
+ }
+
+
+
+.text {
+    padding: 30px;
+    padding-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 20px;
+    color: #030303;
+}
+
+
+
+.contact_container {
+    background-color: #f5f5f5;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.contact_form {
+    flex: 1;
+    max-width: 60%;
+    padding: 30px;
+    border-radius: 0px;
+    margin-bottom: 30px;
+}
+
+
+.field {
+    margin: 20px 0;
+}
+
+.field label {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.field textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    background-color: #ffffff;
+    resize: vertical;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buttons {
+    padding: 16px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    background: #422c1c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0,3s ease;
+}
+
+
+
+.button:hover {
+    color: #c68642;
+    background: transparent;
+    border: 2px solid #c68642;
+    border-radius: #422c1c;
+}
+
+.contact_text {
+    flex: 0.4;
+    padding: 10px 0;
+}
+
+
+.contact_items {
+    margin: 0;
+}
+
+
+
+.hourss {
+    margin-top: 0;
+    padding: 0;
+}
+
+.hourss ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hourss li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.hourss li:last-child {
+    border-bottom: none;
+}
+
+
+.hourss li span {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+}
+
+.hourss li time {
+    display: inline-block;
+    text-align: right;
+}
+
+
+
+/* Background Image for the Menu */
+
+
+
+
+.menu-background {
+    background: url('/_images/background/roasted.jpg') no-repeat center center/cover;
+}
+
+
+
+/* Styling About Us Page */
+
+
+
+.abouts {
+    padding: 20px;
+    background-color: #f5f5dc;
+}
+
+.abouts h1 {
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+
+.abouts .content {
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
-ul.links li {
+
+.abouts p {
+    width: 60%;
+    font-size: 16px;
+    line-height: 1,6;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    text-align: left;
+    margin: 0;
+    padding-top: 90px;
+}
+
+
+
+.image_section {
+    width: 35%;
+    text-align: right;
+}
+
+.image_section img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+
+/* Styling the menu card*/
+
+/* Scoped text alignment for specific sections */
+/* Scoped text alignment for specific sections */
+
+
+
+.coffee-menu-container {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #030303;
+}
+
+
+
+.coffee-menu-container::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.coffee-menu h1, .coffee-menu h2, .coffee-menu p {
+    text-align: center;
+    
+}
+
+
+.footer-info h1, .footer-info h2, .footer-info p {
+    text-align: center;
+    color: #422c1c;
+}
+
+.coffee-menu {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.menu-divider {
+    height: 2px;
+    background-color: brown;
+    border: none;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+.item .flavor, .item .dessert {
+    text-align: left;
+    flex: 1;
+}
+
+.item .price {
+    text-align: right;
     margin-left: 20px;
 }
 
-ul.links a {
-color: #070707;
-text-decoration: none;
-padding: 4px 11px;
-transition: background 0.3s ease;
-
+.footer-info {
+    font-size: 14px;
 }
 
-ul.links a:hover {
-background: #575757;
-border-radius: 4px;
-
+.address {
+    margin-bottom: 5px;
 }
 
 
+/* styling the testimonials */
+
+
+/* Testimonials Section */
+
+
+.testimonials {
+    padding: 50px 20px;
+    background-color: #f5f5dc;
+    text-align: center;
+}
+
+
+.testimonials h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #333;
+    padding-bottom: 20px;
+}
 
 
 
 
 
+/* Container for Testimonials */
+
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+
+
+.testimonial blockquote {
+    font-style: italic;
+    font-size: 16px;
+    margin: 15px 0;
+    color: #666;
+}
 
 
 
 
-
-
+.testimonial .customer-name {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}

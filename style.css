@@ -1,0 +1,212 @@
+
+/* responsive navigation */
+
+
+@media (max-width: 768px){
+    .nav_links {
+        flex-direction: column;
+        display: none;
+    }
+    
+.nav_links.active {
+    display: flex;
+}
+
+.hamburger {
+    display: flex;
+    cursor: pointer;
+}
+
+
+}
+
+
+
+
+/* responsive home sections */
+
+
+@media (max-width:768px) {
+    
+section {
+    padding: 20px 0;
+}
+
+.home-text h2 {
+    font-size: 20px;
+}
+
+.home-text h4 {
+    font-size: 12px;
+}
+.homeTitle {
+    font-size: 1.8rem;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive top category */
+
+@media (max-width: 768px) {
+    .top-category-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-menu {
+        margin-bottom: 20px;
+
+    }
+
+    /* responsive menu section */
+    @media (max-width: 768px) {
+        .menu-item {
+            flex: 1 1 100%;
+        }
+    }
+}
+
+/* responsive gallery section */
+@media (max-width: 576px) {
+    .gallery-container {
+        grid-template-columns: repeat 1fr;
+    }
+}
+   
+ /* responsive gallery section */
+ @media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat 1fr;
+    }
+}
+
+
+/* responsive contact form and footer*/
+
+@media (max-width: 768px) {
+    .contact_container, .footer-content {
+        flex-direction: column;
+
+    }
+    .footer-content div {
+        margin-bottom: 20px;
+    }
+    .buttons-container {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+/* Responsive styles for different screen sizes */
+
+/* Medium screens (tablets) */
+
+
+
+
+@media (max-width: 768px) {
+    .contact_container, .footer-content {
+        flex-direction: column;
+
+    }
+    .footer-content div {
+        margin-bottom: 20px;
+    }
+    .buttons-container {
+        text-align: center;
+    }
+    .nav_links {
+        flex-direction: column;
+        display: none;
+    }
+    .nav_links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+    .menu-item, .gallery-item {
+        width: 100%;
+    }
+    .top-menu{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* small screen (phones) */
+
+@media (max-width: 576px) {
+    .homeTitle {
+        font-size: 1.5rem;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+
+    }
+    .menu {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
