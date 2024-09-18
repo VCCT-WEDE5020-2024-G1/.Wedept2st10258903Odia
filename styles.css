@@ -138,26 +138,7 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
 
 /*
 
-.home-content button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #422c1c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    align-items:center;
-    text-transform: uppercase;
-    border-radius: 8px;
-}
 
-.home-content button:hover {
-    background-color: rgba(224, 168, 84, 0.819);
-    color: white;
-}
-
-     */
 
 /* Styling the Top Category Images */
 
@@ -272,6 +253,7 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
 /* Styling the Footer */
 
 
+
 footer {
     background: rgba(63, 69, 81, 0.16);
     color: #fff;
@@ -303,6 +285,12 @@ footer p {
     font-size: 0.9rem;
 }
 
+.hours li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    display: inline-block;
+}
 
 
 .footer-container {
@@ -315,7 +303,7 @@ footer p {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 20px 0;
@@ -324,13 +312,14 @@ footer p {
 
 
 
-
 .footer-content > div {
     flex: 1;
     margin: 0 10px;
 }
 
-
+.hours, .contacts, .icons, .bottom-links {
+    text-align: left;
+}
 
 .footer-container ul {
     list-style: none;
@@ -338,7 +327,25 @@ footer p {
     margin: 0;
 }
 
+.bottom-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.icons a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.bottom-links a:hover {
+    color: #c68642;
+}
 
+
+
+.icons a:hover {
+    color: #c68642;
+}
 
 .footer-content ul li {
     margin-bottom: 5px;
@@ -352,88 +359,9 @@ footer p {
 #contacts, h2 {
     padding-bottom: 10px;
 }
+    
 /* stop here*/
 
-
-
-
-
-.hours {
-    font-size: 16px;
-}
-
-.hours h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.hours ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 14px;
-}
-
-.hours li {
-    margin-bottom: 8px;
-    border-bottom: 1px solid #ccc;
-    display: inline-block;
-    max-width: 80%;
-    width: auto;
-    padding: 15px;
-    font-size: 14px;
-}
-
-.hours li:last-child {
-    border-bottom: none;
-}
-
-
-
-.icons ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.icons a {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-.icons a:hover {
-    color: #e0ce94;
-}
-
-
-.bottom-links ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: block;
-}
-
-
-.bottom-links ul li {
-    margin-bottom: 5px;
-}
-
-.bottom-links a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-}
-
-.bottom-links a:hover {
-    color: #e0ce94;
-}
-
-.copy {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #ddd;
-}
 /* Gallery Container Styling */
 
 
