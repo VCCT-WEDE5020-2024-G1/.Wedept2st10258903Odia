@@ -36,25 +36,6 @@ nav {
 
 
 
-
-
-
-/* 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-}
-
-ul {
-    list-style: none;
-}
-
-
-
-*/
-
 .nav_links {
 display: flex;
 justify-content: center;
@@ -136,10 +117,6 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
 
 
 
-/*
-
-
-
 /* Styling the Top Category Images */
 
 
@@ -155,6 +132,7 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
     padding: 20px;
     font-size: 20px;
     font-style: italic;
+    font-weight: bold;
 }
 
 .menu h2 {
@@ -189,7 +167,6 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
 
 
 
-
 .description {
     font-size: 20px;
     color: #0a0a0a;
@@ -205,7 +182,6 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 
 .chocolate {
@@ -255,7 +231,7 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
 
 
 footer {
-    background: rgba(63, 69, 81, 0.16);
+    background: rgba(0, 0, 0, 0.16);
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -294,7 +270,7 @@ footer p {
 
 
 .footer-container {
-    background-color: #120801;
+    background-color: #000000;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -397,7 +373,7 @@ margin-bottom: 21px;
 .gallery-item img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s ease;
 }
@@ -408,7 +384,7 @@ margin-bottom: 21px;
 
 .gallery-item p {
     margin-top: 10px;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 14px;
     color: #000000;
     font-style: italic;
@@ -440,6 +416,7 @@ margin-bottom: 21px;
     padding-bottom: 50px;
     font-size: 20px;
     color: #030303;
+    font-weight: bold;
 }
 
 
@@ -512,7 +489,7 @@ margin-bottom: 21px;
 
 .buttons {
     padding: 16px 40px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 50px;
     background: #422c1c;
     color: white;
@@ -527,7 +504,7 @@ margin-bottom: 21px;
 
 
 
-.button:hover {
+.button :hover {
     color: #c68642;
     background: transparent;
     border: 2px solid #c68642;
@@ -607,8 +584,8 @@ margin-bottom: 21px;
     font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-bottom: 20px;
-    padding-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 40px;
 }
 
 
@@ -622,12 +599,13 @@ margin-bottom: 21px;
 
 .abouts p {
     width: 60%;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 1,6;
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
     text-align: left;
     margin: 0;
+    padding-left: 20px;
     padding-top: 90px;
 }
 
@@ -728,8 +706,6 @@ img {
     margin-bottom: 5px;
 }
 
-
-/* styling the testimonials */
 
 
 /* Testimonials Section */
