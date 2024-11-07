@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nanum+Gothic'>
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Bookings</title>
+</head>
+<body>
+
+
+    <header>
+        <nav class="nav container flex">
+            <div class="nav_logo">
+                <a href="#">
+                    <img src="/_images/logo/brandImg1.png" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav_links flex">
+                <li><a href="index.html" class="nav-link active-navlink">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="bookings.html" class="nav-link">Bookings</a></li>
+            </ul>
+
+           <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div> 
+        </nav>
+    </header>
+
+
+
+
+<h1>Booking Form</h1>
+<div class="booking-form">
+<form name="RegForm" onsubmit="return validateForm()">
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" 
+            placeholder="Enter your full name" />
+        <span id="name-error" class="error-message"></span>
+    </p>
+    <p>
+        <label for="address">Date:</label>
+        <input type="text" id="address" name="Address" 
+            placeholder="Mon/Tues" />
+        <span id="address-error" class="error-message"></span>
+    </p>
+    <p>
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="EMail" 
+            placeholder="Enter your email" />
+        <span id="email-error" class="error-message"></span>
+    </p>
+    <p>
+        <label for="password">Phone Number:</label>
+        <input type="password" id="password" name="Password" />
+        <span id="password-error" class="error-message"></span>
+    </p>
+    <p>
+        <label for="subject">Time:</label>
+        <select id="subject" name="Subject">
+            <option value="">
+                Select Time:
+            </option>
+            <option value="9:00">
+              9:00
+            </option>
+            <option value="10:00">
+                10:00
+            </option>
+            <option value="11:00">
+                11:00
+            </option>
+            <option value="12:00">
+                12:00
+            </option>
+            <option value="13:00">
+                13:00
+            </option>
+            <option value="14:00">
+                14:00
+            </option>
+            <option value="15:00">
+                15:00
+            </option>
+            <option value="16:00">
+                16:00
+            </option>
+        </select>
+        <span id="subject-error" class="error-message"></span>
+    </p>
+    <p>
+        <label for="comment">Message:</label>
+        <textarea id="comment" name="Comment"></textarea>
+    </p>
+    <p>
+        <input type="checkbox" id="agree" name="Agree" />
+        <label for="agree">I agree to the above
+            information</label>
+        <span id="agree-error" class="error-message"></span>
+    </p>
+    <p>
+        <input type="submit" value="Send" name="Submit" />
+       
+    </p>
+</form>
+</div>
+<script src="script.js"></script>
+
+
+
+
+<script>
+  
+
+  function validateForm() {
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const subject = document.getElementById("subject").value;
+    const agree = document.getElementById("agree").checked;
+    const nameError = document.getElementById("name-error");
+    
+    const addressError = document.getElementById(
+        "address-error"
+    );
+    const emailError = document.getElementById(
+        "email-error"
+    );
+    const passwordError = document.getElementById(
+        "password-error"
+    );
+    const subjectError = document.getElementById(
+        "subject-error"
+    );
+
+    const agreeError = document.getElementById(
+        "agree-error"
+    );
+
+    nameError.textContent = "";
+    addressError.textContent = "";
+    emailError.textContent = "";
+    passwordError.textContent = "";
+    subjectError.textContent = "";
+    agreeError.textContent = "";
+
+    let isValid = true;
+
+    if (name === "" || /\d/.test(name)) {
+        nameError.textContent =
+            "Please enter your name properly.";
+        isValid = false;
+    }
+
+    if (address === "") {
+        addressError.textContent =
+            "Please enter your address.";
+        isValid = false;
+    }
+
+    if (email === "" || !email.includes("@")) {
+        emailError.textContent =
+            "Please enter a valid email .";
+        isValid = false;
+    }
+
+    if (password === "" || password.length < 10) {
+        passwordError.textContent =
+            "Please enter a valid phone number.";
+        isValid = false;
+    }
+
+    if (subject === "") {
+        subjectError.textContent =
+            "Please select time.";
+        isValid = false;
+    }
+
+    if (!agree) {
+        agreeError.textContent =
+            "Please agree to the above information.";
+        isValid = false;
+    }
+    return isValid;
+}
+</script>
+
+
+
+
+
+
+    <section class="testimonials">
+<h1>What Our Customers Say</h1>
+<div class="testimonials-container">
+
+
+<div class="testimonial">
+    <img src="_images/testimonials/profileImg1.jpg" alt="Customer 1">
+    <blockquote>
+        "The best coffee in town! The atmosphere is so cozy, and the staff are super friendly"
+    </blockquote>
+    <p class="customer-name">- Sarah J.</p>
+</div>
+
+
+
+<div class="testimonial">
+    <img src="_images/testimonials/profileImg2.jpg" alt="Customer 2">
+    <blockquote>
+        "I love their pumkin spice latte! A perfect place to relax and enjoy a good book"
+    </blockquote>
+    <p class="customer-name">- Emma W.</p>
+</div>
+        
+
+<div class="testimonial">
+    <img src="_images/testimonials/profileImg3.jpg" alt="Customer 3">
+    <blockquote>
+        "Fantastic service, delicious coffee, and the desserts are to die for. Highly recommend!"
+    </blockquote>
+    <p class="customer-name">- Mike J.</p>
+</div>
+
+       
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Footer -->
+
+
+
+ <!-- Footer -->
+
+ <footer class="footer-container">
+    <div class="footer-content">
+        <div class="hours">
+            <h2 id="contact">Opening Hours</h2>
+            <ul>
+                <li>Monday: 7:00 AM - 7:00 PM</li>
+                <li>Tuesday: 7:00 AM - 7:00 PM</li>
+                <li>Wednesday: 7:00 AM - 7:00 PM</li>
+                <li>Thursday: 7:00 AM - 7:00 PM</li>
+                <li>Friday: 7:00 AM - 9:00 PM</li>
+                <li>Saturday: 7:00 AM - 9:00 PM</li>
+                <li>Sunday: 7:00 AM - 5:00 PM</li>
+            </ul>
+        </div>
+
+        <div class="contacts">
+            <h2>Contact Us</h2>
+            <p><strong>Address</strong> 143 Harmony Street</p>
+            <p><strong>Phone</strong> +27 454 086 543 </p>
+            <p><strong>Email</strong> 143 Harmony Street</p>
+            <p><strong>Follow Us</strong>coffeeshop@gmail.com</p>
+        </div>
+
+        <div class="icons">
+            <h2>Follow Us</h2>
+
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+
+
+        <div class="bottom-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#booking">Bookings</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="copy">
+        <p>&copy; 2024 Coffee Shop</p>
+    </div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+
+
+</body>
+</html>

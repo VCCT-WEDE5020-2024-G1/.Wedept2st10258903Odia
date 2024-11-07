@@ -27,23 +27,25 @@
 
     <!-- Header -->
 
-    <header>
-        <nav class="nav container flex">
-            <div class="nav_logo">
-                <a href="#">
-                    <img src="/_images/logo/brandImg1.png" alt="Logo">
-                </a>
-            </div>
-            <ul class="nav_links flex">
-                <li><a href="#home" class="nav-link active-navlink">Home</a></li>
-                <li><a href="#about" class="nav-link ">About</a></li>
-                <li><a href="#menu" class="nav-link">Menu</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#bookings" class="nav-link">Bookings</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+   <header>
+    <nav class="nav container flex">
+        <div class="nav_logo">
+            <a href="#">
+                <img src="/_images/logo/brandImg1.png" alt="Logo">
+            </a>
+        </div>
+        <ul class="nav_links flex">
+            <li><a href="index.html" class="nav-link active-navlink">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="menu.html" class="nav-link">Menu</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="bookings.html" class="nav-link">Bookings</a></li>
+        </ul>
+    </nav>
+</header>
+
+
 
 
 
@@ -52,394 +54,65 @@
 
     <!-- Home Section -->
 
-    <section class="home" id="home">
+    <section class="home">
         <div class="home-content">
-            <div class="home-details">
-                <div class="home-text">
-                    <h4 class="homeSubtitle">Making our Coffee with love.</h4>
-                    <h2 class="homeTitle">Coffee Beans with a <br> Perfect Aroma</h2>
+            <div class="slideshow-container">
+                <!-- First Slide -->
+                <div class="mySlides fade">
+                    <img src="/_images/gallery/homeImg1.jpg" style="width:100%">
+                    <div class="overlay-text">
+                        <h4 class="homeSubtitle">Making our coffee with love.</h4>
+                        <h2 class="homeTitle">Coffee Beans with a <br> Perfect Aroma.</h2>
+                        <a href="about.html" class="button">Explore</a>
+                    </div>
                 </div>
-                <a href="#about" class="button">Explore</a>
-            </div>
-        </div>
-    </section>
-
-         <!--About Us -->
-
-    <section class="abouts" id="about">
-        <h1>About Us</h1>
-        <div class="content">
-            <p>Welcome to our coffee shop where every sip awakens your senses, one sip at a time.
-                At our coffee shop, we are passionate of everything coffee. We are committed to sourcing the best
-                specialty coffee beans
-                from sustainable farms around the world and carefully roasting them to perfection to
-                bring out their unique flavors.
-                Our goal is to offer the best experience to our guests, ensuring an authentic coffee drinking experience
-                in
-                a warm, friendly, and relaxed environment.
-                We aim to bring a sense of relaxation to the city with a cozy space, complete with comfortable coucges
-                to
-                lounge in while you enjoy your coffee.
-            </p>
-            <div class="image_section">
-                <img src="_images/top/about_coffee.png" alt="coffee" />
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Menu Section -->
-
-
-    <section class="menu" id="menu">
-        <h1>Our Menu</h1>
-        <p>"Explore our divers menu, where every item is crafted with care to deliver exceptional flavor.
-            Whether you're in the mood for a classic coffee like a rich latte or a unique espresso blend, or if you're
-            craving a sweet
-            treat, our selection has something for everyone"</p>
-        <h2>Top Category</h2>
-        <div class="top-category-container">
-
-            <div class="top-menu">
-                <img src="/_images/top/menuImg1.png" alt="Cupciunno">
-    <p class="description"><strong>Cappuccino</strong><br>Smooth and velvety with a touch of Express </p>
-            </div>
-
-
-            <div class="top-menu">
-                <img src="/_images/top/cofffee_image.png" alt="Latte">
-                <p class="description"><strong>Latte-coffee</strong><br> Creamy blend with a hint of sweetness</p>
-            </div>
-
-            <div class="top-menu">
-                <img src="/_images/top/menuImg2.png" alt="Expresso">
-                <p class="description"><strong>Americano</strong><br>
-                Bold and intense with a deep flavor</p>
-            </div>
-
-            
-
-        </div>
-    </section>
-
-
-
-    <div class="coffee-menu-container">
-        <div class="coffee-menu">
-            <main>
-                <h1>Menu</h1>
-                <p class="established">Est. 2020</p>
-                <hr class="menu-divider">
-                <section>
-                    <h2>Coffee</h2>
-                    <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon" />
-                    <article class="item">
-                        <p class="flavor">French Vanilla</p>
-                        <p class="price">R25.00</p>
-                    </article>
-
-                    <article class="item">
-                        <p class="flavor">French Vanilla</p>
-                        <p class="price">R33.00</p>
-                    </article>
-
-                    <article class="item">
-                        <p class="flavor">Macchiato</p>
-                        <p class="price">R40.00</R40></p>
-                    </article>
-
-                    <article class="item">
-                        <p class="flavor">Hazelnut</p>
-                        <p class="price">R45.00</p>
-                    </article>
-
-                    <article class="item">
-                        <p class="flavor">Mocha</p>
-                        <p class="price">R55.00</p>
-                    </article>
-                </section>
-
-
-                <section>
-                    <h2>Desserts</h2>
-                    <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon" />
-                    <article class="item">
-                        <p class="flavor">Donuts</p>
-                        <p class="price">R15.50</p>
-                    </article>
-
-                    <article class="item">
-                        <p class="flavor">Cherry Pie</p>
-                        <p class="price">R23.70</p>
-                    </article>
-
-                    <article class="item">
-                        <p class="flavor">Cheesecake</p>
-                        <p class="price">R30.00</p>
-                    </article>
-
-                    <article class="item">
-                        <p class="flavor">Cinnamon Rolls</p>
-                        <p class="price">R22.00</p>
-                    </article>
-
-
-                </section>
-
-            </main>
-
-            <hr class="bottom-line">
-            <footer class="footer-info">
-                <p class="address">143 Harmony Street Muizenberg</p>
-            </footer>
-        </div>
-    </div>
-
-
-
-    <!-- Gallery Section -->
-
-    <section class="gallery" id="gallery">
-        <h2>Our Gallery</h2>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="/_images/gallery/gally10.jpg" alt="cafe">
-                <p>cafe</p>
-            </div>
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/gally2.jpg" alt="latte-coffee">
-                <p>Latte Coffee</p>
-            </div>
-
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/gally3.jpg" alt="croissants">
-                <p>Croissants</p>
-            </div>
-
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/spoon.jpg" alt="caffe-mocha">
-                <p>Caffe-mocha</p>
-            </div>
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/gally5.jpg" alt="Chocolate">
-                <p>Latte with Chocolate</p>
-            </div>
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/machine.jpg" alt="machine">
-                <p>Coffee Beans</p>
-            </div>
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/bread.jpg" alt="bread">
-                <p>Bread</p>
-            </div>
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/donut.jpg" alt="donut">
-                <p>Donuts</p>
-            </div>
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/gally6.jpg" alt="cafe">
-                <p>Coffee Beans</p>
-            </div>
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/two-coffe.jpg" alt="two-coffe">
-                <p> Two latte coffees</p>
-            </div>
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/cake.jpg" alt="cake">
-                <p> Cheesecake </p>
-            </div>
-
-
-            <div class="gallery-item">
-                <img src="/_images/gallery/lemon.jpg" alt="cake">
-                <p>Lemon cake with coffee</p>
-            </div>
-
-
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section class="contact" id="bookings">
-        <h2 class="section_title">Bookings</h2>
-        <p class="text">Our booking form provide a convenient way for customers to reserve a table at our coffee shop.
-
-            It is user friendly the form allows guest to the date and time of their visit, specify
-            the number of guest, and leave special requests or notes for the staff</p>
-
-
-        <div class="section_container">
-            <div class="contact_container">
-                <!--form selection-->
-
-                <div class="contact_form">
-                    <form action="#">
-                        <div class="field">
-                            <label for="Name">Full Name</label>
-                            <input type="text" id="Name" placeholder="Your Name" required />
-                        </div>
-
-                        <div class="field">
-                            <label for="Name">Email</label>
-                            <input type="email" id="email" placeholder="Your Email" required />
-                        </div>
-
-                        <div class="field">
-
-                            <label for="Name">Contact Number</label>
-                            <input type="tel" id="Number" placeholder="Your Contact Number" required />
-                        </div>
-
-                        <div class="field">
-                            <label for="Name">Date</label>
-                            <input type="date" id="date" name="date" required />
-                        </div>
-
-                        <div class="field">
-                            <label for="Name">Time</label>
-                            <input type="time" id="time" name="time" required />
-                        </div>
-                        <div class="field">
-                            <label for="guest"> Number Of Guest</label>
-                            <select id="guest" name="guest" required>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label for="requests">Special Requests</label>
-                            <textarea id="requests" name="requests" placeholder="Any special requests"></textarea>
-                        </div>
-                        <!--Button container-->
-                        <div class="buttons-container"><button class="buttons" id="submit">Submit</button></div>
-                    </form>
+    
+                <!-- Second Slide -->
+                <div class="mySlides fade">
+                    <img src="/_images/background/hot-liquid.jpg" style="width:100%">
+                    <div class="overlay-text">
+                        <h4 class="homeSubtitle">We really love what we do.</h4>
+                        <h2 class="homeTitle">Frangance <br> Coffee Aroma.</h2>
+                        <a href="about.html" class="button">Explore</a>
+                        
+                    </div>
                 </div>
-                <!--Contact info section-->
-
-                <div class="contact_text">
-                    <div class="contact_items">
-                        <div class="hourss">
-                            <h2>Opening Hours</h2>
-                            <ul>
-                                <li>Monday: 7:00 AM - 7:00 PM</li>
-                                <li>Tuesday: 7:00 AM - 7:00 PM</li>
-                                <li>Wednesday: 7:00 AM - 7:00 PM</li>
-                                <li>Thursday: 7:00 AM - 7:00 PM</li>
-                                <li>Friday: 7:00 AM - 9:00 PM</li>
-                                <li>Saturday: 7:00 AM - 9:00 PM</li>
-                                <li>Sunday: 7:00 AM - 5:00 PM</li>
-
-                            </ul>
-                        </div>
+    
+                <!-- Third Slide -->
+                <div class="mySlides fade">
+                    <img src="/_images/gallery/homeImg2.jpg" style="width:100%">
+                    <div class="overlay-text">
+                        <h4 class="homeSubtitle">Enjoy the finest coffee drinks.</h4>
+                        <h2 class="homeTitle">Enjoy our Exculsive  <br> Coffee.</h2>
+                        <a href="about.html" class="button">Explore</a>
                     </div>
                 </div>
             </div>
         </div>
-
-    </section>
-
-
-
-    <section class="testimonials" id="testimonials">
-        <h1>What Our Customers Say</h1>
-        <div class="testimonials-container">
-            <div class="testimonial">
-                <img src="_images/testimonials/profileImg1.jpg" alt="Customer 1">
-                <blockquote>
-                    "The best coffee in town! The atmosphere is so cozy, and the staff are super friendly."
-                </blockquote>
-                <p class="customer-name">- Sarah J.</p>
-            </div>
-
-            <div class="testimonial">
-                <img src="_images/testimonials/profileImg2.jpg" alt="Customer 2">
-                <blockquote>
-                    "I love their pumpkin spice latte! A perfect place to relax and enjoy a good book."
-                </blockquote>
-                <p class="customer-name">- Emma W.</p>
-            </div>
-
-            <div class="testimonial">
-                <img src="_images/testimonials/profileImg3.jpg" alt="Customer 3">
-                <blockquote>
-                    "Fantastic service, delicious coffee, and the desserts are to die for. Highly recommend!"
-                </blockquote>
-                <p class="customer-name">-Mike T</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="footer-container">
-        <div class="footer-content">
-            <div class="hours">
-                <h2 id="contact">Opening Hours</h2>
-            <ul>
-                <li>Monday: 7:00 AM - 7:00 PM</li>
-                <li>Tuesday: 7:00 AM - 7:00 PM</li>
-                <li>Wednesday: 7:00 AM - 7:00 PM</li>
-                <li>Thursday: 7:00 AM - 7:00 PM</li>
-                <li>Friday: 7:00 AM - 9:00 PM</li>
-                <li>Saturday: 7:00 AM - 9:00 PM</li>
-                <li>Sunday: 7:00 AM - 5:00 PM</li>
-
-            </ul>
-           </div>
-
-            <div class="contacts">
-                <h2>Contact Us</h2>
-                <p><strong>Address</strong> 143 Harmony Street</p>
-                <p><strong>Phone</strong> +27 143 345 345 </p>
-                <p><strong>Email</strong> 143 Harmony Street</p>
-                <p><strong>Follow Us</strong> coffeeshop@gmail.com</p>
-            </div>
-
-            <div class="icons">
-                <h2>Follow Us</h2>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
-            </div>
-
-            <div class="bottom-links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#booking">Bookings</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="copy">
-            <p>&copy; 2024 Coffee Shop</p>
-        </div>
     
-    </footer>
+       
+    
+        <script>
+            let slideIndex = 0;
+            showSlides();
+    
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+    </section>
+    
 
+    <script src="js/script.js"></script>
+    
 </body>
 
 </html>

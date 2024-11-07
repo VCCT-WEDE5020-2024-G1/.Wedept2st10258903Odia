@@ -1,21 +1,19 @@
-/* General Styling */
+/* General page reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
 }
 
-ul {
-list-style: none;
-}
 
-/* Header and navigation */
+/* Header */
+
+
+
 header {
-    position: fixed;
     top: 0;
     width: 100%;
-    background: white;
+    background-color: white;
     z-index: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -28,24 +26,21 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .nav_logo img {
     max-width: 60px;
     height: auto;
 }
 
-
-
 .nav_links {
-display: flex;
-justify-content: center;
-align-items: center;    
-gap: 40px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
 }
 
 .nav_links a {
-    color: black;
+    color: #000000;
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
@@ -53,71 +48,227 @@ gap: 40px;
     font-weight: 500;
 }
 
+
 .nav_links a:hover {
     border-bottom: 2px solid rgba(142, 87, 5, 0.773);
 }
 
-/*Home section */
 
-.home {
+
+
+
+
+/* Home Section */
+
+
+/* Optional: Fade effect */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Slideshow container */
+
+.slideshow-container{
     position: relative;
-    height: 100vh;
-background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
+    margin: auto;
 }
 
-.home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.home-content {
+.overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50% -50%);
     text-align: center;
-    color: white;
+    color: #f2f2f2;
+    font-family: Arial, sans-serif;
 }
 
 
-.home-text h4 {
-    font-size: 22px;
+
+
+
+
+/* Text styling */
+.homeTitle {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.homeSubtitle {
+    font-size: 18px;
     margin-bottom: 10px;
-    font-weight: 300;
 }
-
-.home-text h2 {
-    font-size: 45px;
-    font-weight: 700;
-}
-
 
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #422c1c;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
+    background-color: #241304;
+    padding: 0.7rem 1.5rem;
     border-radius: 5px;
-    font-size: 1rem;
+    color: #ccc;
+    font-size: 18px;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+
+/* Responsive styling */
+@media only screen and (max-width: 768px) {
+.homeTitle {
+    font-size: 32px;
+}
+.homeSubtitle {
+    font-size: 16px;
+}
+
+.button {
+    font-size: 16px;
+}
+   
+}
+
+
+
+/* Booking Form */
+
+/* Center heading and adjust its color */
+
+h1 {
+    text-align: center;
+    padding-top: 40px;
+    color: #333;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+
+/* Set form to fullscreen layout */
+.booking-form {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+/* Input, select, and textarea styling for fullscreen layout */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+
+
+/* Button styling */
+input[type="submit"],
+input[type="reset"],
+button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: 0.3s ease;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message styling */
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 
-.button:hover {
-    background-color: #c68642;
+
+
+
+/* Gallery Section */
+
+.gallery {
+    padding: 4rem 0;
+    background-color: white;
+    text-align: center;
 }
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.gallery-item p {
+    margin: 1rem;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
 
 
 
 /* Styling the Top Category Images */
+
 
 
 
@@ -157,6 +308,7 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
     max-width: 300px;
 }
 
+
 .top-menu img {
     width: 100%;
     height: auto;
@@ -165,469 +317,16 @@ background: url('/_images/gallery/homeImg1.jpg') no-repeat center center/cover;
     gap: 20px;
 }
 
-
-
 .description {
     font-size: 20px;
     color: #0a0a0a;
     margin-top: 0;
 }
 
-/* Image Styling */
 
-.booking-image {
-    max-width: 100%;
-    width: 100%;
-    height: 750px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.chocolate {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hourss ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-.hourss li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.hourss li:last-child {
-    border-bottom: none;
-}
-
-.hourss li span {
-    display: inline-block;
-    width: 150px;
-    text-align: left;
-}
-
-.hourss li time {
-    display: inline-block;
-    text-align: right;
-}
-
-.hourss h2 {
-    padding-bottom: 30px;
-}
-
-
-
-/* Styling the Footer */
-
-
-
-footer {
-    background: rgba(0, 0, 0, 0.16);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer ul.social-icons {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-footer ul.social-icons li {
-    margin: 0 10px;
-}
-
-footer ul.social-icons li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-
-footer p {
-    margin: 10px 0 0;
-    font-size: 0.9rem;
-}
-
-.hours li {
-    margin-bottom: 8px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8px;
-    display: inline-block;
-}
-
-
-.footer-container {
-    background-color: #000000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-
-.footer-content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 20px 0;
-    border-top: 1px solid #444;
-}
-
-
-
-.footer-content > div {
-    flex: 1;
-    margin: 0 10px;
-}
-
-.hours, .contacts, .icons, .bottom-links {
-    text-align: left;
-}
-
-.footer-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.bottom-links a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-}
-.icons a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-}
-.bottom-links a:hover {
-    color: #c68642;
-}
-
-
-
-.icons a:hover {
-    color: #c68642;
-}
-
-.footer-content ul li {
-    margin-bottom: 5px;
-}
-
-
-.hours, h2 {
-    padding-bottom: 10px;
-}
-
-#contacts, h2 {
-    padding-bottom: 10px;
-}
-    
-/* stop here*/
-
-/* Gallery Container Styling */
-
-
-.gallery-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 21px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
-
-
-#gallery {
-    text-align: center;
-    font-size: 31px;
-}
-
-.gallery h2 {
-    grid-column: span 3;
-    text-align: center;
-margin-bottom: 21px;
-    color: #241304;
-    padding-top: 31px;
-    padding-bottom: 31px;
-}
-
-.gallery-item {
-    text-align: center;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-}
-
-.gallery-item p {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #000000;
-    font-style: italic;
-}
-
-/* Booking Form Section */
-
-
-.contact {
-    padding: 60px 20px 100px;
-}
-
- .section_title {
-    text-align: center;
-    font-size: 28px;
-    color: 28px;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    color: #241304;
- }
-
-
-
-.text {
-    padding: 30px;
-    padding-bottom: 10px;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
-    padding-bottom: 50px;
-    font-size: 20px;
-    color: #030303;
-    font-weight: bold;
-}
-
-
-
-.contact_container {
-    background-color: #f5f5f5;
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 30px;
-    border-radius: 8px;
-    flex-wrap: wrap;
-    padding-top: 30px;
-}
-
-.contact_form {
-    flex: 1;
-    max-width: 60%;
-    padding: 30px;
-    border-radius: 0px;
-    margin-bottom: 30px;
-}
-
-
-.field {
-    margin: 20px 0;
-}
-
-.field label {
-    display: block;
-    font-size: 17px;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-
-.field input,
-.field select {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    height: 50px;
-}
-
-.field textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    background-color: #ffffff;
-    resize: vertical;
-    height: 150px;
-    box-sizing: border-box;
-}
-
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.buttons {
-    padding: 16px 40px;
-    font-size: 20px;
-    border-radius: 50px;
-    background: #422c1c;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    max-width: 250px;
-    text-align: center;
-    font-weight: 600;
-    transition: all 0,3s ease;
-}
-
-
-
-.button :hover {
-    color: #c68642;
-    background: transparent;
-    border: 2px solid #c68642;
-    border-radius: #422c1c;
-}
-
-.contact_text {
-    flex: 0.4;
-    padding: 10px 0;
-}
-
-
-.contact_items {
-    margin: 0;
-}
-
-
-
-.hourss {
-    margin-top: 0;
-    padding: 0;
-}
-
-.hourss ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.hourss li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.hourss li:last-child {
-    border-bottom: none;
-}
-
-
-.hourss li span {
-    display: inline-block;
-    width: 150px;
-    text-align: left;
-}
-
-.hourss li time {
-    display: inline-block;
-    text-align: right;
-}
-
-
-
-/* Background Image for the Menu */
-
-
-
-
-.menu-background {
-    background: url('/_images/background/roasted.jpg') no-repeat center center/cover;
-}
-
-
-
-/* Styling About Us Page */
-
-
-
-.abouts {
-    padding: 20px;
-    background-color: #f5f5dc;
-}
-
-.abouts h1 {
-    font-size: 36px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-    padding-top: 40px;
-}
-
-
-
-.abouts .content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-
-.abouts p {
-    width: 60%;
-    font-size: 19px;
-    line-height: 1,6;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    text-align: left;
-    margin: 0;
-    padding-left: 20px;
-    padding-top: 90px;
-}
-
-
-
-.image_section {
-    width: 35%;
-    text-align: right;
-}
-
-.image_section img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-}
 
 
 /* Styling the menu card*/
-
-/* Scoped text alignment for specific sections */
-/* Scoped text alignment for specific sections */
-
 
 
 .coffee-menu-container {
@@ -643,13 +342,17 @@ margin-bottom: 21px;
     background: rgba(0, 0, 0, 0.5);
 }
 
-.coffee-menu h1, .coffee-menu h2, .coffee-menu p {
+.coffee-menu h1,
+.coffee-menu h2,
+.coffee-menu p {
     text-align: center;
-    
+
 }
 
 
-.footer-info h1, .footer-info h2, .footer-info p {
+.footer-info h1,
+.footer-info h2,
+.footer-info p {
     text-align: center;
     color: #422c1c;
 }
@@ -688,7 +391,8 @@ img {
 }
 
 
-.item .flavor, .item .dessert {
+.item .flavor,
+.item .dessert {
     text-align: left;
     flex: 1;
 }
@@ -706,6 +410,9 @@ img {
     margin-bottom: 5px;
 }
 
+
+
+/* Testimonials Section */
 
 
 /* Testimonials Section */
@@ -773,4 +480,524 @@ img {
     font-weight: bold;
     color: #333;
     margin-top: 10px;
+}
+
+
+
+
+
+/* Styling About Us Page */
+
+
+
+.abouts {
+    padding: 20px;
+    background-color: #f5f5dc;
+}
+
+
+.abouts h1 {
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 40px;
+}
+
+
+.abouts .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.abouts p {
+    width: 60%;
+    font-size: 19px;
+    line-height: 1, 6;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    text-align: left;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 90px;
+}
+
+
+  .image_section {
+    width: 35%;
+    text-align: right;
+  }
+
+.image_section img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+
+
+
+/* Styling the Footer */
+
+footer {
+    background: rgba(0, 0, 0, 0.16);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    forced-color-adjust: auto;
+}
+
+
+footer ul.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+footer ul.social-icons li {
+    margin: 0 10px;
+}
+
+footer ul.social-icons li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+footer p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+}
+
+
+.hours li {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+
+.footer-container {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+}
+
+
+
+
+.footer-content>div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.hours,
+.contacts,
+.icons,
+.bottom-links {
+    text-align: center;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-links a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.icons a {
+    color:#ccc;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.bottom-links a:hover {
+    color:#c68642
+}
+
+.icons a:hover {
+    color: #c68642;
+}
+
+.footer-content ul li {
+    margin-bottom: 5px;
+}
+
+.hours
+h2 {
+    padding-bottom: 10px;
+}
+
+
+#contacts,
+h2 {
+    padding-bottom: 10px;
+}
+
+
+
+
+
+/* responsive navigation */
+
+.mobile-menu-icon {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Hide the nav links and show the menu icon */
+.nav_links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav_links.active {
+    display: flex;
+}
+
+  .mobile-menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+    
+
+}
+
+
+
+/* Responsive Footer screens */
+
+
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 15px;
+    }
+
+    .footer-content h2 {
+        font-size: 1em;
+    }
+
+    .footer-content p,
+    .footer-content a {
+        font-size: 0.85em;
+    }
+
+    footer ul.social-icons li a {
+       
+        font-size: 1.2rem;
+        /* Smaller icon size on small screens */
+    }
+
+   footer ul.social-icons li a {
+    font-size: 1.2rem;
+   }
+    
+
+   .hours ul {
+    padding: 0;
+    list-style: none;
+    width: 70%;
+    margin: 0 auto;
+   }
+
+.hours ul li {
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+
+
+
+}
+
+
+
+
+
+
+/* Responsive Booking Form Styling for Smaller Screens */
+@media (max-width: 768px) {
+    
+form {
+    padding: 15px;
+    max-width: 90%;
+}
+
+
+    h1 {
+        font-size: 1.8rem;
+        padding-top: 20px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    
+
+  form {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+
+
+    h1 {
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+
+    /* Smaller font sizes for input fields and buttons */
+
+
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+
+    input[type="submit"],
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+
+    .testimonials h1 {
+        font-size: 28px;
+    }
+
+    .testimonial {
+        padding: 15px;
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .testimonial img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .testimonial blockquote {
+        font-size: 14px;
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+
+}
+
+
+/* Responsive Menu Styling */
+@media (max-width: 768px) {
+    .menu h1 {
+        font-size: 32px;
+    }
+
+    .menu p {
+        font-size: 18px;
+    }
+
+    .menu h2 {
+        font-size: 26px;
+    }
+
+    .top-category-container {
+        gap: 5%;
+        /* Reduce gap between items */
+    }
+
+    .top-menu {
+        max-width: 100%;
+        /* Make each item take full width */
+    }
+
+    .top-menu img {
+        max-width: 80%;
+        /* Scale down images for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .menu h1 {
+        font-size: 28px;
+    }
+
+    .menu p {
+        font-size: 16px;
+    }
+
+    .menu h2 {
+        font-size: 24px;
+    }
+
+    .top-category-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-menu img {
+        max-width: 90%;
+    }
+
+
+
+    .description {
+        font-size: 16px;
+    }
+
+
+}
+
+
+/* Responsive Gallery Styles */
+@media (max-width: 768px) {
+
+
+    .gallery h2 {
+        font-size: 28px;
+
+    }
+
+    .gallery-item {
+        width: 200px;
+    }
+
+    .gallery-item p {
+        font-size: 14px;
+    }
+
+
+}
+
+
+@media (max-width: 480px) {
+
+    .gallery-container {
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .gallery-item img {
+        max-width: 100%;
+    }
+
+    .gallery-item p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* Responsive About Styles */
+@media (max-width: 768px) {
+
+    .abouts h1 {
+        font-size: 30px;
+    }
+
+    .abouts .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .abouts p {
+        width: 100%;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .image_section {
+        width: 80%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .image_section img {
+        max-width: 100%;
+    }
+
+
+
+
+}
+
+
+
+
+@media (max-width: 480px) {
+
+
+    .abouts h1 {
+        font-size: 28px;
+    }
+
+    .abouts p {
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+    .image_section {
+        width: 100%;
+    }
 }
